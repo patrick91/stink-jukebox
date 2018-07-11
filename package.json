@@ -1,0 +1,83 @@
+{
+  "name": "stink-jukebox",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@stinkstudios/react-scripts": "1.0.19",
+    "caniuse-lite": "1.0.30000828",
+    "postcss-cssnext": "3.1.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint": "react-scripts lint",
+    "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.{js,css,graphql}\""
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "singleQuote": true
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "@stinkstudios/eslint-config-react-app",
+    "settings": {
+      "polyfills": [
+        "fetch",
+        "promises",
+        "serviceworkers"
+      ]
+    }
+  },
+  "stylelint": {
+    "ignoreFiles": [
+      "./build/**",
+      "./config/**",
+      "./node_modules/**",
+      "./public/**",
+      "./scripts/**"
+    ],
+    "extends": "@stinkstudios/stylelint-config-react-app",
+    "rules": {
+      "plugin/no-unsupported-browser-features": [
+        true,
+        {
+          "severity": "warning",
+          "ignore": [
+            "calc",
+            "css-animation",
+            "flexbox",
+            "transforms2d",
+            "viewport-units"
+          ]
+        }
+      ]
+    }
+  },
+  "browserslist": [
+    ">1%",
+    "last 4 versions",
+    "Firefox ESR",
+    "not ie < 9"
+  ],
+  "postcss": {
+    "ident": "postcss",
+    "plugins": {
+      "postcss-flexbugs-fixes": {},
+      "postcss-cssnext": {
+        "features": {
+          "autoprefixer": {
+            "flexbox": "no-2009"
+          }
+        }
+      }
+    }
+  }
+}
