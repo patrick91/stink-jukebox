@@ -1,3 +1,6 @@
+@import './base/font-faces.css';
+@import './base/vars/fonts.css';
+
 * {
   box-sizing: border-box;
 }
@@ -13,5 +16,9 @@ body {
   padding: 0;
   padding: 70px;
   margin: 0;
-  font-family: sans-serif;
+  color: #1f1f1f;
+  font-family: var(--ff-primary);
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }

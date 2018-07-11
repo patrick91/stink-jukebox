@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Maison Mono';
+  src: url('./assets/fonts/MaisonMono-Regular.woff2') format('woff2'),
+    url('./assets/fonts/MaisonMono-Regular.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Canela';
+  src: url('./assets/fonts/Canela-Light.woff2') format('woff2'),
+    url('./assets/fonts/Canela-Light.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Lettera Text Std';
+  src: url('./assets/fonts/LetteraTextStd-Bold.woff2') format('woff2'),
+    url('./assets/fonts/LetteraTextStd-Bold.woff') format('woff');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Lettera Text Std';
+  src: url('./assets/fonts/LetteraTextStd-Black.woff2') format('woff2'),
+    url('./assets/fonts/LetteraTextStd-Black.woff') format('woff');
+  font-style: normal;
+  font-weight: 900;
+}
