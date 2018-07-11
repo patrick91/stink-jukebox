@@ -39,7 +39,7 @@ Typography.propTypes = {
     header: string,
     subHeader: string,
   }),
-  variant: oneOf(['body', 'alt-body', 'header', 'sub-header']),
+  variant: oneOf(['body', 'alt-body', 'header', 'sub-header', 'accent']),
   className: string,
 };
 

@@ -33,6 +33,16 @@
   letter-spacing: 11px;
 }
 
+.accent {
+  display: inline-block;
+  width: auto;
+  margin-right: -3px;
+  font-family: var(--ff-accent);
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 3px;
+}
+
 .mb10 { margin-bottom: 10px; }
 .mb30 { margin-bottom: 30px; }
 .mb80 { margin-bottom: 80px; }

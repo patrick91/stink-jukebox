@@ -1,0 +1,26 @@
+.playback {
+  display: flex;
+  width: 100%;
+  margin-bottom: 70px;
+  align-items: center;
+  justify-content: center;
+}
+
+.bar {
+  display: inline-block;
+  width: 540px;
+  height: 4px;
+  margin: 0 45px;
+  position: relative;
+  background-color: #e8e8e8;
+}
+
+.bar::after {
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #1f1f1f;
+  content: ' ';
+}

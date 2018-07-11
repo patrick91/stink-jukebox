@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 // Components
 import Artwork from './components/artwork';
+import PlaybackBar from './components/playback-bar';
 import Typography from './components/typography';
 
 import './app.css';
@@ -18,6 +19,7 @@ class App extends Component {
           Currently Playing
         </Typography>
         <Artwork imgSrc={tempArtwork} />
+        <PlaybackBar totalTime="3:34" elapsedTime="1:07" />
         <Typography variant="header" component="h1" margin="mb30">
           Time to Dance - Sebatian Remix
         </Typography>
