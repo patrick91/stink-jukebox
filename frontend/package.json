@@ -5,6 +5,7 @@
   "dependencies": {
     "@stinkstudios/react-scripts": "1.0.19",
     "caniuse-lite": "1.0.30000828",
+    "normalize.css": "^8.0.0",
     "postcss-cssnext": "3.1.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
@@ -55,7 +56,8 @@
             "css-animation",
             "flexbox",
             "transforms2d",
-            "viewport-units"
+            "viewport-units",
+            "border-radius"
           ]
         }
       ]

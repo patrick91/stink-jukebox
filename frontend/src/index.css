@@ -1,5 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.root {
+  height: 100%;
+}
+
 body {
+  min-height: 1920px;
   padding: 0;
+  padding: 70px;
   margin: 0;
   font-family: sans-serif;
 }
