@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 
-import 'normalize.css';
+// Components
+import Artwork from './components/artwork';
+
 import './app.css';
+import tempArtwork from './components/artwork/temp@2x.jpg';
 
 class App extends Component {
   render() {
-    return <div className="app">Stink Jukebox</div>;
+    return (
+      <div className="app">
+        <Artwork imgSrc={tempArtwork} />
+      </div>
+    );
   }
 }
 

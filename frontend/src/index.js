@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'normalize.css';
 import './index.css';
 import sentry from './sentry';
 import * as serviceWorker from './service-worker';
