@@ -10,6 +10,7 @@
 
 .bar {
   display: inline-block;
+  overflow: hidden;
   width: 540px;
   height: 4px;
   border-radius: 2px;
@@ -19,11 +20,13 @@
 }
 
 .progress {
+  width: calc(var(--progress) * 1%);
   height: 100%;
   border-radius: 2px;
   position: absolute;
   top: 0;
   left: 0;
   background-color: var(--c-green);
+  transition: width 200ms ease;
   content: ' ';
 }

@@ -29,7 +29,7 @@ class PlaybackBar extends Component {
         <span className={classes.bar}>
           <span
             className={classes.progress}
-            style={{ width: `${this.progress()}%` }}
+            style={{ '--progress': this.progress() }}
           />
         </span>
         <Typography variant="accent" component="span">

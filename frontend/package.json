@@ -61,7 +61,8 @@
             "transforms2d",
             "viewport-units",
             "border-radius",
-            "fontface"
+            "fontface",
+            "css-transitions"
           ]
         }
       ]
