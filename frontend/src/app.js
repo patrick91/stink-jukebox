@@ -10,26 +10,36 @@ import SongMeta from './components/song-meta';
 
 import './app.css';
 import tempArtwork from './components/artwork/temp@2x.jpg';
+import tempArtwork2 from './components/artwork/temp2.jpg';
 
-const data = {
-  online: true,
-  current: {
-    artwork: tempArtwork,
-    artist: 'The Shoes',
-    song: 'Time to Dance - Sebatian Remix',
-    time: {
-      total: 240,
-      elapsed: 100,
-    },
-  },
-  next: {
-    artist: 'Justice',
-    song: 'Genesis',
-  },
-};
 class App extends Component {
+  state = {
+    online: true,
+    current: {
+      artwork: tempArtwork,
+      artist: 'The Shoes',
+      song: 'Time to Dance - Sebatian Remix',
+      time: {
+        total: 240,
+        elapsed: 100,
+      },
+    },
+    next: {
+      artist: 'Justice',
+      song: 'Genesis',
+    },
+  };
+
+  componentDidMount() {
+    setTimeout(() => {
+      const current = { ...this.state.current };
+      current.artwork = tempArtwork2;
+      this.setState({ current });
+    }, 4000);
+  }
+
   render() {
-    const { online, current, next } = data;
+    const { online, current, next } = this.state;
     return (
       <div className="app">
         <Header />

@@ -1,4 +1,5 @@
 @import '../../base/vars/colors.css';
+@import '../../base/animations.css';
 
 .artwork,
 .disabled {
@@ -6,6 +7,9 @@
   height: 448px;
   border-radius: 224px;
   margin-bottom: 100px;
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
 .disabled {

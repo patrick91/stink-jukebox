@@ -5,7 +5,7 @@ import classes from './style.module.css';
 
 const Artwork = ({ imgSrc }) => {
   if (imgSrc) {
-    return <img className={classes.artwork} src={imgSrc} alt="" />;
+    return <img className={classes.artwork} key={imgSrc} src={imgSrc} alt="" />;
   }
   return <span className={classes.disabled} />;
 };
