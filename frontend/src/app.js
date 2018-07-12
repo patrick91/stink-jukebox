@@ -42,7 +42,7 @@ class App extends Component {
     const { online, current, next } = this.state;
     return (
       <div className="app">
-        <Header />
+        <Header online={online} />
 
         <Typography variant="sub-header" component="h4" margin="mb30">
           Stink Studios
