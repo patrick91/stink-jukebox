@@ -10,6 +10,7 @@
   display: inline-block;
   width: 540px;
   height: 4px;
+  border-radius: 2px;
   margin: 0 45px;
   position: relative;
   background-color: #e8e8e8;
@@ -17,9 +18,10 @@
 
 .progress {
   height: 100%;
+  border-radius: 2px;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #1f1f1f;
+  background-color: #3fea91;
   content: ' ';
 }

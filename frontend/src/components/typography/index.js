@@ -32,7 +32,7 @@ const Typography = ({
 
 Typography.propTypes = {
   children: node.isRequired,
-  margin: oneOf([false, 'mb10', 'mb30', 'mb80', 'mb130', 'mb200']),
+  margin: oneOf([false, 'mb10', 'mb30', 'mb60', 'mb80', 'mb130']),
   component: oneOfType([string, func]),
   headlineMapping: shape({
     body: string,
