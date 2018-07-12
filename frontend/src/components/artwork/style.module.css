@@ -2,13 +2,15 @@
 
 .artwork,
 .disabled {
-  width: 448px;
-  height: 448px;
+  width: 100%;
+  height: auto;
+  max-width: 448px;
   border-radius: 224px;
   margin-bottom: 100px;
 }
 
 .disabled {
   display: inline-block;
+  height: 448px;
   border: 6px solid var(--c-grey);
 }
