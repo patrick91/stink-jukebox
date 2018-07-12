@@ -1,4 +1,5 @@
 @import '../../base/vars/fonts.css';
+@import '../../base/vars/colors.css';
 
 .base {
   overflow: hidden;
@@ -42,6 +43,9 @@
   font-weight: normal;
   letter-spacing: 3px;
 }
+
+.black { color: var(--c-black); }
+.grey { color: var(--c-grey); }
 
 .mb10 { margin-bottom: 10px; }
 .mb30 { margin-bottom: 30px; }

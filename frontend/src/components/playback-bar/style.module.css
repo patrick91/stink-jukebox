@@ -30,3 +30,7 @@
   transition: width 200ms ease;
   content: ' ';
 }
+
+.disabled .time {
+  color: var(--c-grey);
+}

@@ -10,6 +10,7 @@ const Typography = ({
   headlineMapping,
   variant,
   margin,
+  color,
   className: additionalClassses,
   ...other
 }) => {
@@ -18,6 +19,7 @@ const Typography = ({
     {
       [classes[variant]]: variant,
       [classes[margin]]: margin,
+      [classes[color]]: color,
     },
     additionalClassses
   );
@@ -32,6 +34,7 @@ const Typography = ({
 
 Typography.propTypes = {
   children: node.isRequired,
+  color: oneOf(['black', 'grey']),
   margin: oneOf([false, 'mb10', 'mb30', 'mb60', 'mb80', 'mb130']),
   component: oneOfType([string, func]),
   headlineMapping: shape({
@@ -44,6 +47,7 @@ Typography.propTypes = {
 };
 
 Typography.defaultProps = {
+  color: 'black',
   margin: false,
   component: null,
   headlineMapping: {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import cx from 'classnames';
 import { number } from 'prop-types';
 
 // Components
@@ -21,9 +22,12 @@ class PlaybackBar extends Component {
 
   render() {
     const { elapsedTime, totalTime } = this.props;
+    const className = cx(classes.playback, {
+      [classes.disabled]: !totalTime,
+    });
     return (
-      <div className={classes.playback}>
-        <Typography variant="accent" component="span">
+      <div className={className}>
+        <Typography variant="accent" component="span" className={classes.time}>
           {this.secondsToMinutes(elapsedTime)}
         </Typography>
         <span className={classes.bar}>
@@ -32,7 +36,7 @@ class PlaybackBar extends Component {
             style={{ '--progress': this.progress() }}
           />
         </span>
-        <Typography variant="accent" component="span">
+        <Typography variant="accent" component="span" className={classes.time}>
           {this.secondsToMinutes(totalTime)}
         </Typography>
       </div>
@@ -41,8 +45,13 @@ class PlaybackBar extends Component {
 }
 
 PlaybackBar.propTypes = {
-  elapsedTime: number.isRequired,
-  totalTime: number.isRequired,
+  elapsedTime: number,
+  totalTime: number,
+};
+
+PlaybackBar.defaultProps = {
+  elapsedTime: 0,
+  totalTime: 0,
 };
 
 export default PlaybackBar;
