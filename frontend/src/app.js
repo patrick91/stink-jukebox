@@ -10,7 +10,7 @@ import SongMeta from './components/song-meta';
 
 import './app.css';
 import tempArtwork from './components/artwork/temp@2x.jpg';
-import tempArtwork2 from './components/artwork/temp2.jpg';
+// import tempArtwork2 from './components/artwork/temp2.jpg';
 
 class App extends Component {
   state = {
@@ -30,13 +30,13 @@ class App extends Component {
     },
   };
 
-  componentDidMount() {
-    setTimeout(() => {
-      const current = { ...this.state.current };
-      current.artwork = tempArtwork2;
-      this.setState({ current });
-    }, 4000);
-  }
+  // componentDidMount() {
+  //   setTimeout(() => {
+  //     const current = { ...this.state.current };
+  //     current.artwork = tempArtwork2;
+  //     this.setState({ current });
+  //   }, 4000);
+  // }
 
   render() {
     const { online, current, next } = this.state;
