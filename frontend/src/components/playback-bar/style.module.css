@@ -1,3 +1,5 @@
+@import '../../base/vars/colors.css';
+
 .playback {
   display: flex;
   width: 100%;
@@ -13,7 +15,7 @@
   border-radius: 2px;
   margin: 0 45px;
   position: relative;
-  background-color: #e8e8e8;
+  background-color: var(--c-grey);
 }
 
 .progress {
@@ -22,6 +24,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #3fea91;
+  background-color: var(--c-green);
   content: ' ';
 }

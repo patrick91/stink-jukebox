@@ -1,5 +1,6 @@
 @import './base/font-faces.css';
 @import './base/vars/fonts.css';
+@import './base/vars/colors.css';
 
 * {
   box-sizing: border-box;
@@ -16,7 +17,7 @@ body {
   padding: 0;
   padding: 70px;
   margin: 0;
-  color: #1f1f1f;
+  color: var(--c-black);
   font-family: var(--ff-primary);
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
