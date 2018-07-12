@@ -1,10 +1,12 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
 // Components
 import Artwork from './components/artwork';
 import PlaybackBar from './components/playback-bar';
 import Typography from './components/typography';
 import Header from './components/header';
+import UpNext from './components/up-next';
+import SongMeta from './components/song-meta';
 
 import './app.css';
 import tempArtwork from './components/artwork/temp@2x.jpg';
@@ -40,48 +42,15 @@ class App extends Component {
         </Typography>
 
         <Artwork imgSrc={current.artwork} />
+
         <PlaybackBar
           totalTime={current.time.total}
           elapsedTime={current.time.elapsed}
         />
 
-        {current.song ? (
-          <Fragment>
-            <Typography variant="header" component="h1" margin="mb30">
-              {current.song}
-            </Typography>
-            <Typography component="h2" margin="mb130">
-              {current.artist}
-            </Typography>
-          </Fragment>
-        ) : (
-          <Typography
-            variant="header"
-            component="h3"
-            margin="mb130"
-            color="grey"
-          >
-            No track added
-          </Typography>
-        )}
+        <SongMeta song={current.song} artist={current.artist} />
 
-        <Typography variant="sub-header" component="h5" margin="mb60">
-          Up Next
-        </Typography>
-        {next.song ? (
-          <Fragment>
-            <Typography component="h3" margin="mb10">
-              {next.song}
-            </Typography>
-            <Typography variant="alt-body" component="h4">
-              {next.artist}
-            </Typography>
-          </Fragment>
-        ) : (
-          <Typography component="h3" color="grey">
-            No track in queue
-          </Typography>
-        )}
+        <UpNext song={next.song} artist={next.artist} />
       </div>
     );
   }
