@@ -19,7 +19,7 @@ class App extends Component {
           Currently Playing
         </Typography>
         <Artwork imgSrc={tempArtwork} />
-        <PlaybackBar totalTime={120} elapsedTime={60} />
+        <PlaybackBar totalTime={130} elapsedTime={62} />
         <Typography variant="header" component="h1" margin="mb30">
           Time to Dance - Sebatian Remix
         </Typography>

@@ -12,12 +12,19 @@ class PlaybackBar extends Component {
     return Math.floor((elapsedTime / totalTime) * 100);
   }
 
+  secondsToMinutes(time) {
+    const minutes = Math.floor(time / 60);
+    let seconds = time - minutes * 60;
+    if (seconds < 10) seconds = `0${seconds}`;
+    return `${minutes}:${seconds}`;
+  }
+
   render() {
     const { elapsedTime, totalTime } = this.props;
     return (
       <div className={classes.playback}>
         <Typography variant="accent" component="span">
-          {elapsedTime}
+          {this.secondsToMinutes(elapsedTime)}
         </Typography>
         <span className={classes.bar}>
           <span
@@ -26,7 +33,7 @@ class PlaybackBar extends Component {
           />
         </span>
         <Typography variant="accent" component="span">
-          {totalTime}
+          {this.secondsToMinutes(totalTime)}
         </Typography>
       </div>
     );
