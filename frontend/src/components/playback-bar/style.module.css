@@ -15,8 +15,7 @@
   background-color: #e8e8e8;
 }
 
-.bar::after {
-  width: 40%;
+.progress {
   height: 100%;
   position: absolute;
   top: 0;
