@@ -1,6 +1,13 @@
 :root {
+  --c-white: #fff;
   --c-black: #1f1f1f;
   --c-grey: #e8e8e8;
   --c-green: #3fea91;
   --c-red: #ff6b6b;
+}
+
+.dark {
+  --c-white: #1f1f1f;
+  --c-black: #fff;
+  --c-grey: #262d2d;
 }

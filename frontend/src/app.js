@@ -14,6 +14,7 @@ import tempArtwork from './components/artwork/temp@2x.jpg';
 
 class App extends Component {
   state = {
+    dark: false,
     online: true,
     current: {
       artwork: tempArtwork,
@@ -30,13 +31,14 @@ class App extends Component {
     },
   };
 
-  // componentDidMount() {
-  //   setTimeout(() => {
-  //     const current = { ...this.state.current };
-  //     current.artwork = tempArtwork2;
-  //     this.setState({ current });
-  //   }, 4000);
-  // }
+  componentDidMount() {
+    if (this.state.dark) document.body.classList.add('dark');
+    // setTimeout(() => {
+    //   const current = { ...this.state.current };
+    //   current.artwork = tempArtwork2;
+    //   this.setState({ current });
+    // }, 4000);
+  }
 
   render() {
     const { online, current, next } = this.state;

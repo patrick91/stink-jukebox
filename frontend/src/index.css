@@ -18,6 +18,7 @@ body {
   padding: 70px;
   margin: 0;
   color: var(--c-black);
+  background: var(--c-white);
   font-family: var(--ff-primary);
   font-weight: bold;
   -webkit-font-smoothing: antialiased;

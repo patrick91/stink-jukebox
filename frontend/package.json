@@ -81,6 +81,10 @@
       "postcss-flexbugs-fixes": {},
       "postcss-cssnext": {
         "features": {
+          "customProperties": {
+            "preserve": true,
+            "warnings": false
+          },
           "autoprefixer": {
             "flexbox": "no-2009"
           }
