@@ -10,7 +10,7 @@ import classes from './style.module.css';
 class PlaybackBar extends Component {
   progress() {
     const { elapsedTime, totalTime } = this.props;
-    return Math.floor((elapsedTime / totalTime) * 100);
+    return (elapsedTime / totalTime) * 100;
   }
 
   secondsToMinutes(time) {
