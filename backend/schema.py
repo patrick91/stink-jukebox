@@ -43,14 +43,19 @@ class Subscription(graphene.ObjectType):
 
             next_song = sonos.get_queue(
                 start=track["playlist_position"], max_items=1
-            )[0]
-
-            next_song = next_song.to_dict() if next_song else None
-            next_song = (
-                NextSong(artist=next_song["creator"], title=next_song["title"])
-                if next_song
-                else None
             )
+
+            if len(next_song) == 0:
+                next_song = None
+            else:
+                next_song = next_song.to_dict() if next_song else None
+                next_song = (
+                    NextSong(
+                        artist=next_song["creator"], title=next_song["title"]
+                    )
+                    if next_song
+                    else None
+                )
 
             duration = track["duration"]
             position = track["position"]
