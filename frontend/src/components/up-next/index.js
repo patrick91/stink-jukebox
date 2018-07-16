@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
-import { string } from 'prop-types';
+import { shape, string } from 'prop-types';
 
 // Components
 import Typography from '../typography';
 
-const UpNext = ({ song, artist }) => (
+const UpNext = ({ song }) => (
   <Fragment>
     <Typography variant="sub-header" component="h5" margin="mb60">
       Up Next
@@ -12,10 +12,10 @@ const UpNext = ({ song, artist }) => (
     {song ? (
       <Fragment>
         <Typography component="h3" margin="mb10">
-          {song}
+          {song.title}
         </Typography>
         <Typography variant="alt-body" component="h4">
-          {artist}
+          {song.artist}
         </Typography>
       </Fragment>
     ) : (
@@ -27,13 +27,14 @@ const UpNext = ({ song, artist }) => (
 );
 
 UpNext.propTypes = {
-  song: string,
-  artist: string,
+  song: shape({
+    title: string.isRequired,
+    artist: string.isRequired,
+  }),
 };
 
 UpNext.defaultProps = {
   song: null,
-  artist: null,
 };
 
 export default UpNext;

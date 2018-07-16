@@ -9,7 +9,7 @@ import Artwork from './components/artwork';
 import PlaybackBar from './components/playback-bar';
 import Typography from './components/typography';
 import Header from './components/header';
-// import UpNext from './components/up-next';
+import UpNext from './components/up-next';
 import SongMeta from './components/song-meta';
 
 import './app.css';
@@ -22,6 +22,10 @@ const SONG_UPDATED = gql`
       artworkUrl
       duration
       elapsed
+      nextSong {
+        title
+        artist
+      }
     }
   }
 `;
@@ -49,7 +53,9 @@ class App extends Component {
               artworkUrl,
               duration,
               elapsed,
+              nextSong,
             } = data.onSongUpdated;
+
             return (
               <div className="app">
                 <Header online={online} />
@@ -67,7 +73,7 @@ class App extends Component {
 
                 <SongMeta song={title} artist={artist} />
 
-                {/* <UpNext song={next.song} artist={next.artist} /> */}
+                <UpNext song={nextSong} />
               </div>
             );
           }}
