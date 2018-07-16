@@ -48,7 +48,7 @@ class Subscription(graphene.ObjectType):
             if len(next_song) == 0:
                 next_song = None
             else:
-                next_song = next_song.to_dict() if next_song else None
+                next_song = next_song[0].to_dict() if next_song else None
                 next_song = (
                     NextSong(
                         artist=next_song["creator"], title=next_song["title"]
