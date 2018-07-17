@@ -17,6 +17,7 @@ import './app.css';
 const SONG_UPDATED = gql`
   subscription {
     onSongUpdated {
+      paused
       title
       artist
       artworkUrl
@@ -31,23 +32,20 @@ const SONG_UPDATED = gql`
 `;
 
 class App extends Component {
-  state = {
-    dark: false,
-    online: true,
-  };
+  state = { dark: false };
 
   componentDidMount() {
     if (this.state.dark) document.body.classList.add('dark');
   }
 
   render() {
-    const { online } = this.state;
     return (
       <ApolloProvider client={client}>
         <Subscription subscription={SONG_UPDATED}>
           {({ data, error, loading }) => {
             if (loading || error) return null;
             const {
+              paused,
               title,
               artist,
               artworkUrl,
@@ -58,13 +56,13 @@ class App extends Component {
 
             return (
               <div className="app">
-                <Header online={online} />
+                <Header paused={paused} />
 
                 <Typography variant="sub-header" component="h4" margin="mb30">
                   Stink Studios
                 </Typography>
                 <Typography variant="header" component="h3" margin="mb80">
-                  {online ? 'Currently Playing' : 'Offline'}
+                  {paused ? 'Paused' : 'Currently Playing'}
                 </Typography>
 
                 <Artwork imgSrc={artworkUrl} />

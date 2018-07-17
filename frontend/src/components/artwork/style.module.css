@@ -1,16 +1,19 @@
 @import '../../base/vars/colors.css';
 
-.artwork,
-.disabled {
-  width: 100%;
-  height: auto;
-  max-width: 448px;
+.container {
+  width: 448px;
+  height: 448px;
+  border: 6px solid var(--c-grey);
   border-radius: 224px;
   margin-bottom: 100px;
 }
 
-.disabled {
-  display: inline-block;
-  height: 448px;
-  border: 6px solid var(--c-grey);
+.artwork {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
+
+.active { opacity: 1; }

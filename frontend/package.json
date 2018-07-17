@@ -71,7 +71,8 @@
             "viewport-units",
             "border-radius",
             "fontface",
-            "css-transitions"
+            "css-transitions",
+            "css3-cursors"
           ]
         }
       ]

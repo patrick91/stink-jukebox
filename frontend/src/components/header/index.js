@@ -4,10 +4,10 @@ import cx from 'classnames';
 
 import classes from './style.module.css';
 
-const Header = ({ online }) => (
+const Header = ({ paused }) => (
   <header
     className={cx(classes.header, {
-      [classes.online]: online,
+      [classes.paused]: paused,
     })}
   >
     <span className={classes.logo} />
@@ -18,7 +18,7 @@ const Header = ({ online }) => (
 );
 
 Header.propTypes = {
-  online: bool.isRequired,
+  paused: bool.isRequired,
 };
 
 export default Header;
