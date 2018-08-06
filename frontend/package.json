@@ -3,19 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@stinkstudios/react-scripts": "1.0.19",
+    "@stinkstudios/react-scripts": "2.0.4",
     "apollo-cache-inmemory": "^1.2.5",
     "apollo-client": "^2.3.5",
     "apollo-link": "^1.2.2",
     "apollo-link-http": "^1.5.4",
     "apollo-link-ws": "^1.0.8",
     "apollo-utilities": "^1.0.16",
-    "caniuse-lite": "1.0.30000828",
     "classnames": "^2.2.6",
     "graphql-tag": "^2.9.2",
     "normalize.css": "^8.0.0",
-    "postcss-cssnext": "3.1.0",
-    "postcss-import": "^11.1.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-apollo": "^2.1.9",
@@ -37,6 +34,18 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      [
+        "babel-plugin-named-asset-import",
+        {
+          "loaderMap": {
+            "svg": {
+              "ReactComponent": "@svgr/webpack![path]"
+            }
+          }
+        }
+      ]
     ]
   },
   "eslintConfig": {
@@ -78,23 +87,26 @@
       ]
     }
   },
-  "browserslist": [
-    ">1%",
-    "last 4 versions",
-    "Firefox ESR",
-    "not ie < 9"
-  ],
+  "browserslist": {
+    "development": [
+      "last 2 chrome versions",
+      "last 2 firefox versions",
+      "last 2 edge versions"
+    ],
+    "production": [
+      ">0.25%",
+      "not op_mini all",
+      "ie 11"
+    ]
+  },
   "postcss": {
     "ident": "postcss",
     "plugins": {
       "postcss-import": {},
       "postcss-flexbugs-fixes": {},
-      "postcss-cssnext": {
+      "postcss-preset-env": {
+        "stage": 0,
         "features": {
-          "customProperties": {
-            "preserve": true,
-            "warnings": false
-          },
           "autoprefixer": {
             "flexbox": "no-2009"
           }
